@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    color: #333;
+}
+
+.question {
+margin-bottom: 20px;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
