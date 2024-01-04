@@ -1,3 +1,9 @@
+function startQuiz() {
+    const username = document.getElementById('username').value;
+    document.getElementById('usernameForm').style.display = 'none';
+    document.getElementById('quizContainer').style.display = 'block';
+}
+
 let currentQuestion = 1;
 
 function showQuestion(questionNumber) {
