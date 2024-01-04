@@ -1,3 +1,30 @@
+let currentQuestion = 1;
+
+function showQuestion(questionNumber) {
+    for (let i = 1; i < 3; i++) {
+        const question = document.getElementById('question' + i);
+        if (i === questionNumber) {
+            question.style.display = 'block';
+        } else {
+            question.style.display = 'none';
+        }
+    }
+}
+
+function nextQuestion () {
+    if (currentQuestion < 3) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+    }
+}
+
+function previousQuestion () {
+    if (currentQuestion > 1) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+    }
+}
+
 function checkAnswers() {
     let correctAnswers = 0;
 
