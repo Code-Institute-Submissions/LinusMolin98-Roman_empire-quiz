@@ -17,5 +17,5 @@ function checkAnswers() {
     }
 
    
-    document.getElementById('result').innerHTML = "You got " + correctAnswers + " out of 3 questions correct!";
+     document.getElementById('result').innerHTML = "You got " + correctAnswers + " out of 3 questions correct!";
 }
