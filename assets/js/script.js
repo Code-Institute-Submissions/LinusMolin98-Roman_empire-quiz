@@ -1,7 +1,7 @@
 let currentQuestion = 1;
 
 function showQuestion(questionNumber) {
-    for (let i = 1; i < 3; i++) {
+    for (let i = 1; i <= 3; i++) {
         const question = document.getElementById('question' + i);
         if (i === questionNumber) {
             question.style.display = 'block';
