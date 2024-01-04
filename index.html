@@ -21,7 +21,7 @@
 <h2>Roman Empire Quiz</h2>
     
     
-    <div class="question">
+    <div id= "question1" class="question">
         <p>1. Who was the first Emperor of Rome?</p>
         <div class="options">
             <input type="radio" name="q1" value="a"> Augustus<br>
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="question">
+    <div id="question2" class="question" style="display: none;">
         <p>2. In which year was the Roman Empire founded?</p>
         <div class="options">
             <input type="radio" name="q2" value="a"> 27 BC<br>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="question">
+    <div id="question3" class="question" style="display: none;">
         <p>3. What was the capital city of the Roman Empire?</p>
         <div class="options">
             <input type="radio" name="q3" value="a"> Athens<br>
@@ -48,6 +48,8 @@
         </div>
     </div>
     
+    <button onclick="previousQuestion()">Previous</button>
+    <button onclick="nextQuestion()">Next</button>
     <button onclick="checkAnswers()">Submit</button>
     
     <div id="result"></div>
