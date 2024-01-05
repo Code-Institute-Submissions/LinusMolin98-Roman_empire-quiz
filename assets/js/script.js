@@ -82,7 +82,12 @@ function checkAnswers() {
         correctAnswers++;
     }
 
-    document.getElementById('result').innerHTML = "Hello, " + document.getElementById('username').value.trim() + "! You got " + correctAnswers + " out of 3 questions correct!";
+    const username = document.getElementById('username').value.trim();
+    const score = correctAnswers;
+    localStorage.setItem(username, score);
+   
+    const scoreElement = document.getElementById('score');
+    scoreElement.innerHTML = "Hello, " + document.getElementById('username').value.trim() + "! You got " + correctAnswers + " out of 3 questions correct!";
 
     setTimeout(function () {
         hideQuizWindow();
