@@ -13,7 +13,9 @@ The Roman Empire Quiz is a web application designed to provide users with an eng
 ## Deployment Procedure
 
 github-pages
-Lastdeployed 34 minutes ago (2024-01-05)
+
+Last deployed 34 minutes ago (2024-01-05)
+
 <https://linusmolin98.github.io/Roman_empire-quiz/>
 
 - One deployment was made early in process to check that everything was working fine. 
@@ -34,3 +36,27 @@ Lastdeployed 34 minutes ago (2024-01-05)
 
 ![Quiz Result](/screenshots/action_testingxxxx.png)
 *Score showing when submission is activated*
+
+## Code organization
+
+- HTML: Organized into sections for clarity.
+
+- CSS: External file linked in the HEAD element.
+
+- JavaScript: External file linked just above the closing body tag.
+
+## Code Readability
+
+- Files named consistently and descriptively.
+
+- Grouped into directories by file type (e.g., assets directory for static files).
+
+## Version Control (GitHub)
+
+- The development process has been documented through version control on GitHub. Visit the GitHub Repository for detailed commit history and branches.
+
+- Link to repository here (<https://github.com/LinusMolin98/Roman_empire-quiz?tab=readme-ov-file>)
+
+## Markdown Formatting
+
+- This README.md file uses consistent and effective markdown formatting, providing a well-structured and easy-to-follow guide.
