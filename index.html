@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,61 +14,121 @@
     <meta name="theme-color" content="#ffffff">
     <title>Roman Empire Quiz</title>
 </head>
+
 <body>
 
+    <img src="assets/images/Roman_helmet.jpg" alt="Roman Helmet">
 
-
-<img src="assets/images/Roman_helmet.jpg" alt="Roman Helmet">
-
-
-<h2>Roman Empire Quiz</h2>
+    <h2>Roman Empire Quiz</h2>
 
     <form id="usernameForm">
         <label for="username">Enter your username:</label>
         <input type="text" id="username" name="username" required>
         <button type="button" onclick="startQuiz()">Start Quiz</button>
     </form>
-    
+
     <div id="score"></div>
-    
+
     <div id="quizContainer" style="display: none;">
-    
-    
-    <div id= "question1" class="question">
-        <p>1. Who was the first Emperor of Rome?</p>
-        <div class="options">
-            <input type="radio" name="q1" value="a"> Augustus<br>
-            <input type="radio" name="q1" value="b"> Julius Caesar<br>
-            <input type="radio" name="q1" value="c"> Nero<br>
+
+        <div class="question" id="question1">
+            <p>Who is considered the legendary founder of Rome?</p>
+            <div class="options">
+                <input type="radio" name="q1" value="a"> Romulus
+                <input type="radio" name="q1" value="b"> Julius Caesar
+                <input type="radio" name="q1" value="c"> Augustus
+            </div>
         </div>
-    </div>
 
-    <div id="question2" class="question" style="display: none;">
-        <p>2. In which year was the Roman Empire founded?</p>
-        <div class="options">
-            <input type="radio" name="q2" value="a"> 27 BC<br>
-            <input type="radio" name="q2" value="b"> 476 AD<br>
-            <input type="radio" name="q2" value="c"> 63 BC<br>
+        <div class="question" id="question2" style="display: none;">
+            <p>What event marked the traditional date for the founding of Rome?</p>
+            <div class="options">
+                <input type="radio" name="q2" value="a"> Battle of Actium
+                <input type="radio" name="q2" value="b"> Ides of March
+                <input type="radio" name="q2" value="c"> The Rape of the Sabine Women
+            </div>
         </div>
-    </div>
 
-    <div id="question3" class="question" style="display: none;">
-        <p>3. What was the capital city of the Roman Empire?</p>
-        <div class="options">
-            <input type="radio" name="q3" value="a"> Athens<br>
-            <input type="radio" name="q3" value="b"> Rome<br>
-            <input type="radio" name="q3" value="c"> Constantinople<br>
+        <div class="question" id="question3" style="display: none;">
+            <p>Which river is Rome situated along?</p>
+            <div class="options">
+                <input type="radio" name="q3" value="a"> Nile
+                <input type="radio" name="q3" value="b"> Tiber
+                <input type="radio" name="q3" value="c"> Danube
+            </div>
         </div>
-    </div>
-    
-    <button id="prevButton" onclick="previousQuestion()">Previous</button>
-    <button id="nextButton" onclick="nextQuestion()">Next</button>
-    <button onclick="checkAnswers()">Submit</button>
-    
-    <div id="result"></div>
 
-    
+        <div class="question" id="question4" style="display: none;">
+            <p>What was the name of the code of laws established in ancient Rome?</p>
+            <div class="options">
+                <input type="radio" name="q4" value="a"> Twelve Tables
+                <input type="radio" name="q4" value="b"> Code of Hammurabi
+                <input type="radio" name="q4" value="c"> Justinian Code
+            </div>
+        </div>
 
-    <script src="assets/js/script.js"></script>
+        <div class="question" id="question5" style="display: none;">
+            <p>Who was the Carthaginian general who famously crossed the Alps during the Second Punic War?</p>
+            <div class="options">
+                <input type="radio" name="q5" value="a"> Hannibal
+                <input type="radio" name="q5" value="b"> Scipio Africanus
+                <input type="radio" name="q5" value="c"> Julius Caesar
+            </div>
+        </div>
+
+        <div class="question" id="question6" style="display: none;">
+            <p>What Roman architectural marvel is known for its gladiator contests and public events?</p>
+            <div class="options">
+                <input type="radio" name="q6" value="a"> Colosseum
+                <input type="radio" name="q6" value="b"> Pantheon
+                <input type="radio" name="q6" value="c"> Roman Forum
+            </div>
+        </div>
+
+        <div class="question" id="question7" style="display: none;">
+            <p>Which Roman general declared himself dictator for life, leading to the end of the Roman Republic?</p>
+            <div class="options">
+                <input type="radio" name="q7" value="a"> Pompey
+                <input type="radio" name="q7" value="b"> Julius Caesar
+                <input type="radio" name="q7" value="c"> Mark Antony
+            </div>
+        </div>
+
+        <div class="question" id="question8" style="display: none;">
+            <p>What event signaled the official division of the Roman Empire into Eastern and Western halves?</p>
+            <div class="options">
+                <input type="radio" name="q8" value="a"> The Great Schism
+                <input type="radio" name="q8" value="b"> The Battle of Adrianople
+                <input type="radio" name="q8" value="c"> The Council of Chalcedon
+            </div>
+        </div>
+
+        <div class="question" id="question9" style="display: none;">
+            <p>Who was the last Roman emperor before the fall of the Western Roman Empire in 476 AD?</p>
+            <div class="options">
+                <input type="radio" name="q9" value="a"> Augustus
+                <input type="radio" name="q9" value="b"> Romulus Augustulus
+                <input type="radio" name="q9" value="c"> Constantine the Great
+            </div>
+        </div>
+
+        <div class="question" id="question10" style="display: none;">
+            <p>What is the Latin phrase for "Roman Peace," a long period of relative peace and stability in the
+                Roman Empire?</p>
+            <div class="options">
+                <input type="radio" name="q10" value="a"> Pax Romana
+                <input type="radio" name="q10" value="b"> Veni, Vidi, Vici
+                <input type="radio" name="q10" value="c"> Senatus Populusque Romanus
+            </div>
+        </div>
+
+        <button id="prevButton" onclick="previousQuestion()">Previous</button>
+        <button id="nextButton" onclick="nextQuestion()">Next</button>
+        <button onclick="checkAnswers()">Submit</button>
+
+        <div id="result"></div>
+
+        <script src="assets/js/script.js"></script>
 </body>
+
 </html>

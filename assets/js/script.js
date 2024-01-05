@@ -1,6 +1,7 @@
 let currentQuestion = 1;
-let totalQuestions = 3;
+let totalQuestions = 10; 
 let usernameProvided = false;
+let questionOrder = [];
 
 function startQuiz() {
     const username = document.getElementById('username').value.trim();
@@ -8,16 +9,28 @@ function startQuiz() {
     if (username === '') {
         alert('Please enter your username before starting the quiz.');
     } else {
+        questionOrder = shuffleArray(Array.from({ length: totalQuestions }, (_, i) => i + 1));
+
         document.getElementById('usernameForm').style.display = 'none';
         document.getElementById('quizContainer').style.display = 'block';
         usernameProvided = true;
-        showQuestion(currentQuestion);
+        currentQuestion = 1;
+        showQuestion(questionOrder[currentQuestion - 1]);
         enableRadioButtons();
     }
 }
 
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 function showQuestion(questionNumber) {
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= totalQuestions; i++) {
         const question = document.getElementById('question' + i);
         if (i === questionNumber) {
             question.style.display = 'block';
@@ -28,13 +41,12 @@ function showQuestion(questionNumber) {
 }
 
 function nextQuestion() {
-    if (usernameProvided && currentQuestion < 3) {
+    if (usernameProvided && currentQuestion < totalQuestions) {
         currentQuestion++;
-        showQuestion(currentQuestion);
+        showQuestion(questionOrder[currentQuestion - 1]);
         updateButtonStates();
     }
 }
-
 function previousQuestion() {
     if (usernameProvided && currentQuestion > 1) {
         currentQuestion--;
@@ -81,16 +93,11 @@ function checkAnswers() {
 
     let correctAnswers = 0;
 
-    if (document.querySelector('input[name="q1"]:checked').value === "a") {
-        correctAnswers++;
-    }
-
-    if (document.querySelector('input[name="q2"]:checked').value === "a") {
-        correctAnswers++;
-    }
-
-    if (document.querySelector('input[name="q3"]:checked').value === "b") {
-        correctAnswers++;
+    for (let i = 1; i <= totalQuestions; i++) {
+        const selectedValue = document.querySelector('input[name="q' + i + '"]:checked');
+        if (selectedValue !== null && selectedValue.value === "a") {
+            correctAnswers++;
+        }
     }
 
     const username = document.getElementById('username').value.trim();
@@ -98,11 +105,10 @@ function checkAnswers() {
 
     localStorage.setItem(username, score);
 
-    
     retrieveScore();
 
     const scoreElement = document.getElementById('score');
-    scoreElement.innerHTML = "Hello, " + username + "! You got " + score + " out of 3 questions correct!";
+    scoreElement.innerHTML = "Hello, " + username + "! You got " + score + " out of " + totalQuestions + " questions correct!";
 
     setTimeout(function () {
         hideQuizWindow();
