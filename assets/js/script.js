@@ -62,6 +62,17 @@ nextButton.disabled = currentQuestion === totalQuestions;
 prevButton.disabled = currentQuestion === 1;
 }
 
+function retrieveScore() {
+    const username = document.getElementById('username').value.trim();
+    const storedScore = localStorage.getItem(username);
+
+    if (storedScore !== null) {
+        const scoreElement = document.getElementById('score');
+        scoreElement.innerHTML = "Hello again, " + username + "! Your previous score was " + storedScore + " out of 3.";
+    }
+}
+
+
 function checkAnswers() {
     if (!usernameProvided) {
         alert('Please enter your username before submitting the quiz.');
@@ -84,14 +95,17 @@ function checkAnswers() {
 
     const username = document.getElementById('username').value.trim();
     const score = correctAnswers;
+
     localStorage.setItem(username, score);
-   
+
+    
+    retrieveScore();
+
     const scoreElement = document.getElementById('score');
-    scoreElement.innerHTML = "Hello, " + document.getElementById('username').value.trim() + "! You got " + correctAnswers + " out of 3 questions correct!";
+    scoreElement.innerHTML = "Hello, " + username + "! You got " + score + " out of 3 questions correct!";
 
     setTimeout(function () {
         hideQuizWindow();
         updateButtonStates();
     }, 100);
-
 }
