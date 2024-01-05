@@ -1,4 +1,5 @@
 let currentQuestion = 1;
+let totalQuestions = 3;
 let usernameProvided = false;
 
 function startQuiz() {
@@ -30,6 +31,7 @@ function nextQuestion() {
     if (usernameProvided && currentQuestion < 3) {
         currentQuestion++;
         showQuestion(currentQuestion);
+        updateButtonStates();
     }
 }
 
@@ -37,6 +39,7 @@ function previousQuestion() {
     if (usernameProvided && currentQuestion > 1) {
         currentQuestion--;
         showQuestion(currentQuestion);
+        updateButtonStates(); 
     }
 }
 
@@ -45,6 +48,10 @@ function enableRadioButtons() {
     radioButtons.forEach(button => {
         button.disabled = false;
     });
+}
+
+function hideQuizWindow() {
+    document.getElementById('quizContainer').style.display = 'none';
 }
 
 function updateButtonStates() {
@@ -76,4 +83,10 @@ function checkAnswers() {
     }
 
     document.getElementById('result').innerHTML = "Hello, " + document.getElementById('username').value.trim() + "! You got " + correctAnswers + " out of 3 questions correct!";
+
+    setTimeout(function () {
+        hideQuizWindow();
+        updateButtonStates();
+    }, 100);
+
 }
