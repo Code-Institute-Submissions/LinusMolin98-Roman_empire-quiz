@@ -17,3 +17,20 @@ Lastdeployed 34 minutes ago (2024-01-05)
 <https://linusmolin98.github.io/Roman_empire-quiz/>
 
 - One deployment was made early in process to check that everything was working fine. 
+
+## Action testing page 
+
+![Welcome Screen](/screenshots/action_testing.png)
+*Welcome Screen with Username Input*
+
+![Quiz Question](/screenshots/action_testing2.png)
+*Action testing buttons*
+
+![Quiz Result](/screenshots/action_testing3.png)
+*Quiz changing question works without error*
+
+![Quiz Result](/screenshots/action_testingxx.png)
+*Close up of question box working*
+
+![Quiz Result](/screenshots/action_testingxxxx.png)
+*Score showing when submission is activated*
