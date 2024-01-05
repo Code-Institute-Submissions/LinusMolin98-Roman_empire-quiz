@@ -78,3 +78,24 @@ Code written by [sitepoint]
 ## Template
 
 - Template used for this project is the Code Institute template (<https://github.com/Code-Institute-Org/ci-full-template>)
+
+## Lighthouse Report
+
+![lighthouse](/screenshots/Lighthouse_test.png)
+*Lighthouse report running with succesful result*
+
+## Am i Responsive 
+
+![Am i Responsive](/screenshots/am_i_responsive.png)
+*Am i responsive showing how the project looks on different screens, media queries working fine*
+
+## Validation testing
+
+![Validation](/screenshots/validation_image.png)
+*HTML code running through w3c validator without Errors!*
+
+![Validation](/screenshots/validation_image2.png)
+*JavaScript code running through JShint with some warning, but nor mayor issues or errors, just some places where the code canbbe optimized, wich seems reasonable with regards to my experience coding with this language*
+
+![Validation](/screenshots/validationimage3.png)
+*CSS code running through Jigsaw test without any Errors!*
