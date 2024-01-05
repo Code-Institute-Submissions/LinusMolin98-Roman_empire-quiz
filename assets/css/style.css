@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(11, 22, 133);
-    font-family: Arial, sans-serif;
+    background-color: #c00c0c;
+    font-family: 'Arial', sans-serif;
     max-width: 600px;
     margin: auto;
 }
@@ -20,21 +20,25 @@ img {
 }
 
 .question {
-margin-bottom: 20px;
-background-color: #fff;
-padding: 10px;
-border-radius: 8px;
-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .options {
     margin-left: 20px;
 }
 
+input[type="radio"] {
+    margin-right: 8px;
+}
+
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -47,4 +51,90 @@ button:hover {
 #result {
     margin-top: 20px;
     font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+#quizContainer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#usernameForm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="button"] {
+    background-color: #0B1685;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #09236a;
+}
+
+#prevButton,
+#nextButton,
+#submitButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+#prevButton:hover,
+#nextButton:hover,
+#submitButton:hover {
+    background-color: #45a049;
+}
+
+#prevButton:disabled,
+#nextButton:disabled,
+#submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        max-width: 80%;
+    }
+
+    #quizContainer {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        max-width: 1200px;
+    }
+
+    #quizContainer {
+        padding: 30px;
+    }
 }
