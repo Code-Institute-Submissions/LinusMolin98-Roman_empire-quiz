@@ -47,6 +47,14 @@ function enableRadioButtons() {
     });
 }
 
+function updateButtonStates() {
+const nextButton = document.getElementById('nextButton');
+const prevButton = document.getElementById('prevButton');
+
+nextButton.disabled = currentQuestion === totalQuestions;
+prevButton.disabled = currentQuestion === 1;
+}
+
 function checkAnswers() {
     if (!usernameProvided) {
         alert('Please enter your username before submitting the quiz.');
