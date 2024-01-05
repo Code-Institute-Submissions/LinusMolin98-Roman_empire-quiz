@@ -95,7 +95,7 @@ Code written by [sitepoint]
 *HTML code running through w3c validator without Errors!*
 
 ![Validation](/screenshots/validation_image2.png)
-*JavaScript code running through JShint with some warning, but nor mayor issues or errors, just some places where the code canbbe optimized, wich seems reasonable with regards to my experience coding with this language*
+*JavaScript code running through JShint with some warnings, but no mayor issues or errors, just some places where the code can be optimized, wich seems reasonable with regards to my experience coding with this language*
 
 ![Validation](/screenshots/validationimage3.png)
 *CSS code running through Jigsaw test without any Errors!*
