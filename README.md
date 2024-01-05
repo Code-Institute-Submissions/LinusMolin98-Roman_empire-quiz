@@ -60,3 +60,21 @@ Last deployed 34 minutes ago (2024-01-05)
 ## Markdown Formatting
 
 - This README.md file uses consistent and effective markdown formatting, providing a well-structured and easy-to-follow guide.
+
+## Code Attribution
+
+-Code written by [geeksforgeeks]
+
+-External Link to attribution - [https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/]
+
+Code written by [sitepoint]
+
+-External Link to attribution - [https://www.sitepoint.com/simple-javascript-quiz/]
+
+-Code written by [codingninjas]
+
+-External Link to attribution - [https://www.codingninjas.com/studio/library/how-to-create-a-javascript-quiz-code]
+
+## Template
+
+- Template used for this project is the Code Institute template (<https://github.com/Code-Institute-Org/ci-full-template>)
