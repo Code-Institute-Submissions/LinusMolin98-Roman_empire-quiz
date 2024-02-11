@@ -134,4 +134,5 @@ function displayFeedback(correctAnswers, incorrectAnswers) {
     const feedbackElement = document.getElementById('result');
     feedbackElement.textContent = feedbackMessage;
     feedbackElement.style.display = 'block';
+    feedbackElement.style.color = 'black';
 }
