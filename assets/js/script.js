@@ -1,5 +1,5 @@
 let currentQuestion = 1;
-let totalQuestions = 10; 
+let totalQuestions = 10;
 let usernameProvided = false;
 let questionOrder = [];
 
@@ -13,6 +13,7 @@ function startQuiz() {
 
         document.getElementById('usernameForm').style.display = 'none';
         document.getElementById('quizContainer').style.display = 'block';
+        document.getElementById('instructions').style.display = 'none'; // Hide instructions after starting the quiz
         usernameProvided = true;
         currentQuestion = 1;
         showQuestion(questionOrder[currentQuestion - 1]);
