@@ -13,14 +13,13 @@ function startQuiz() {
 
         document.getElementById('usernameForm').style.display = 'none';
         document.getElementById('quizContainer').style.display = 'block';
-        document.getElementById('instructions').style.display = 'none'; // Hide instructions after starting the quiz
+        document.getElementById('instructions').style.display = 'none';
         usernameProvided = true;
         currentQuestion = 1;
         showQuestion(questionOrder[currentQuestion - 1]);
         enableRadioButtons();
     }
 }
-
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -39,6 +38,10 @@ function showQuestion(questionNumber) {
             question.style.display = 'none';
         }
     }
+
+    // Clear previous feedback
+    const feedbackElement = document.getElementById('result');
+    feedbackElement.textContent = '';
 }
 
 function nextQuestion() {
@@ -48,11 +51,12 @@ function nextQuestion() {
         updateButtonStates();
     }
 }
+
 function previousQuestion() {
     if (usernameProvided && currentQuestion > 1) {
         currentQuestion--;
-        showQuestion(currentQuestion);
-        updateButtonStates(); 
+        showQuestion(questionOrder[currentQuestion - 1]);
+        updateButtonStates();
     }
 }
 
@@ -68,11 +72,11 @@ function hideQuizWindow() {
 }
 
 function updateButtonStates() {
-const nextButton = document.getElementById('nextButton');
-const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const prevButton = document.getElementById('prevButton');
 
-nextButton.disabled = currentQuestion === totalQuestions;
-prevButton.disabled = currentQuestion === 1;
+    nextButton.disabled = currentQuestion === totalQuestions;
+    prevButton.disabled = currentQuestion === 1;
 }
 
 function retrieveScore() {
@@ -85,7 +89,6 @@ function retrieveScore() {
     }
 }
 
-
 function checkAnswers() {
     if (!usernameProvided) {
         alert('Please enter your username before submitting the quiz.');
@@ -93,11 +96,18 @@ function checkAnswers() {
     }
 
     let correctAnswers = 0;
+    const correctAnswersArray = [];
+    const incorrectAnswersArray = [];
 
     for (let i = 1; i <= totalQuestions; i++) {
         const selectedValue = document.querySelector('input[name="q' + i + '"]:checked');
-        if (selectedValue !== null && selectedValue.value === "a") {
+        const isCorrect = selectedValue !== null && selectedValue.value === "a";
+
+        if (isCorrect) {
             correctAnswers++;
+            correctAnswersArray.push(i);
+        } else {
+            incorrectAnswersArray.push(i);
         }
     }
 
@@ -111,8 +121,17 @@ function checkAnswers() {
     const scoreElement = document.getElementById('score');
     scoreElement.innerHTML = "Hello, " + username + "! You got " + score + " out of " + totalQuestions + " questions correct!";
 
-    setTimeout(function () {
-        hideQuizWindow();
-        updateButtonStates();
-    }, 100);
+    displayFeedback(correctAnswersArray, incorrectAnswersArray);
+}
+
+function displayFeedback(correctAnswers, incorrectAnswers) {
+    let feedbackMessage = "You answered the following questions correctly: " + correctAnswers.join(", ");
+
+    if (incorrectAnswers.length > 0) {
+        feedbackMessage += "\nYou answered the following questions incorrectly: " + incorrectAnswers.join(", ");
+    }
+
+    const feedbackElement = document.getElementById('result');
+    feedbackElement.textContent = feedbackMessage;
+    feedbackElement.style.display = 'block';
 }
