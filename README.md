@@ -103,3 +103,5 @@ Code written by [sitepoint]
 ## Bug Fixing
 
 - If you encounter any issues or bugs while using the Roman Empire Quiz application, please report them by opening an [issue](https://github.com/your-username/Roman_empire-quiz/issues). Include a detailed description of the problem, steps to reproduce, and any error messages you may have encountered. Your feedback helps me improve the application and provide a better experience for all users. I appreciate your contribution to making the quiz more robust and enjoyable!
+
+- Bugs where minimal during the coding process, everything went smooth! 
