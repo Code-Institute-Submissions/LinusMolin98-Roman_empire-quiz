@@ -23,6 +23,12 @@ The Roman Empire Quiz is an interactive web application designed to test and enr
   - [External Resources](#external-resources)
 - [Acknowledgements](#acknowledgements)
 
+# Features 
+
+## Navigation
+![When reaching site](screenshots/reachingthesite.png)
+- Upon reaching the site, the user is welcomed by a picture of a roman helmet, some information about how the quiz is played, and the bar where the user have to put in there username to start the quiz. If the user does not put in there username, they will be unable to start the quiz.
+
 ### Purpose
 - **Engage users** in the rich history of the Roman Empire through an interactive quiz format.
 - **Educate** participants about key events, figures, and cultural aspects of ancient Rome.
@@ -59,7 +65,8 @@ The Roman Empire Quiz is deployed via GitHub Pages and is accessible [here](http
 - **Validation**: HTML, CSS, and JavaScript codes have been validated with no major errors.
 
 ### Lighthouse Report
-A comprehensive Lighthouse audit confirms high performance, accessibility, best practices, and SEO.
+![Lighthouse](screenshots/lighthouse2.png)
+A comprehensive Lighthouse audit confirms high performance, accessibility, best practices, and SEO. Performance could be higher, but with the circumstances given, it´s a result im happy with. 
 
 ## Credits
 
