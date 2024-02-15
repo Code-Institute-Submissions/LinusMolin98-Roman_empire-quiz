@@ -19,19 +19,27 @@
     <button onclick="restartQuiz()">Restart Quiz</button>
 
     <script>
-        // Extract results and username from URL parameters
-        const params = new URLSearchParams(window.location.search);
-        const username = params.get('username');
-        const score = params.get('score');
-        const total = params.get('total');
-
-        document.getElementById('greeting').textContent = `Hello, ${username}!`;
-        document.getElementById('correctAnswers').textContent = score;
-        document.getElementById('totalQuestions').textContent = total;
-
+        window.addEventListener('load', () => {
+            const username = localStorage.getItem('quizUsername');
+            const score = localStorage.getItem('quizScore');
+            const total = localStorage.getItem('totalQuestions');
+            const answersDetail = JSON.parse(localStorage.getItem('answersDetail')); // Parse the string back into an object
+    
+            document.getElementById('greeting').textContent = `Hello, ${username}!`;
+            document.getElementById('correctAnswers').textContent = score;
+            document.getElementById('totalQuestions').textContent = total;
+    
+            const resultsContainer = document.getElementById('detailedResults');
+            for (const [question, result] of Object.entries(answersDetail)) {
+                const resultText = document.createElement('p');
+                resultText.textContent = `${question.toUpperCase()}: ${result}`;
+                resultsContainer.appendChild(resultText);
+            }
+        });
+    
         function restartQuiz() {
-            // Navigate back to the quiz start page
             window.location.href = 'index.html'; // Adjust this URL to your quiz start page
+            localStorage.clear(); // Optionally clear the local storage if the quiz is being restarted
         }
     </script>
 <script src="assets/js/script.js"></script>

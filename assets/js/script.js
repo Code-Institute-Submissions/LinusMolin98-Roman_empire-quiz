@@ -66,17 +66,32 @@ function updateButtonStates() {
 
 function checkAnswers() {
     let correctAnswers = 0;
+    let answersDetail = {}; // Object to hold the correctness of each question
+
     for (let i = 1; i <= totalQuestions; i++) {
         const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
         const correctOption = "a"; // Assuming 'a' is the correct answer for simplicity
 
-        if (selectedOption && selectedOption.value === correctOption) {
-            correctAnswers++;
+        if (selectedOption) {
+            if (selectedOption.value === correctOption) {
+                correctAnswers++;
+                answersDetail[`q${i}`] = 'correct';
+            } else {
+                answersDetail[`q${i}`] = 'incorrect';
+            }
+        } else {
+            answersDetail[`q${i}`] = 'unanswered';
         }
     }
 
     const username = document.getElementById('username').value.trim();
-    window.location.href = `results.html?username=${encodeURIComponent(username)}&score=${correctAnswers}&total=${totalQuestions}`;
+    // Save results and details in local storage
+    localStorage.setItem('quizUsername', username);
+    localStorage.setItem('quizScore', correctAnswers);
+    localStorage.setItem('totalQuestions', totalQuestions);
+    localStorage.setItem('answersDetail', JSON.stringify(answersDetail)); // Convert object to string to store in local storage
+
+    window.location.href = 'results.html'; // Redirect to results page
 }
 
 // Helper function to reset the quiz if needed
