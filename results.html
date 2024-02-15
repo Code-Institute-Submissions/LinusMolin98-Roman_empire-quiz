@@ -38,13 +38,13 @@
             for (const [question, result] of Object.entries(answersDetail)) {
                 const resultText = document.createElement('p');
                 resultText.textContent = `${question.toUpperCase()}: ${result}`;
-                resultText.className = result; // Assign class based on the result for styling
+                resultText.className = result; 
                 resultsContainer.appendChild(resultText);
             }
         });
 
         function restartQuiz() {
-            window.location.href = 'index.html'; // Adjust this URL to your quiz start page
+            window.location.href = 'index.html'; 
             localStorage.clear(); // Clear local storage to reset the quiz for the next attempt
         }
     </script>

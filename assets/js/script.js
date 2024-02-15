@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+/* exported startQuiz, nextQuestion, previousQuestion, checkAnswers, resetQuiz */
+
 let currentQuestion = 1;
 let totalQuestions = 10;
 let usernameProvided = false;
