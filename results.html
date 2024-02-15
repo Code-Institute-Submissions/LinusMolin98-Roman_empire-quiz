@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Add any additional styles or links -->
+</head>
+<body>
+
+    <h2>Quiz Results</h2>
+
+    <div id="userResult">
+        <p id="greeting"></p>
+        <p>You answered <span id="correctAnswers"></span> out of <span id="totalQuestions"></span> questions correctly.</p>
+    </div>
+
+    <button onclick="restartQuiz()">Restart Quiz</button>
+
+    <script>
+        // Extract results and username from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+        const score = params.get('score');
+        const total = params.get('total');
+
+        document.getElementById('greeting').textContent = `Hello, ${username}!`;
+        document.getElementById('correctAnswers').textContent = score;
+        document.getElementById('totalQuestions').textContent = total;
+
+        function restartQuiz() {
+            // Navigate back to the quiz start page
+            window.location.href = 'index.html'; // Adjust this URL to your quiz start page
+        }
+    </script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
