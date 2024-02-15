@@ -1,107 +1,77 @@
 # Roman Empire Quiz
-
-## Purpose
-
-The Roman Empire Quiz is a web application designed to provide users with an engaging quiz about the history of the Roman Empire. Users can test their knowledge on various topics related to ancient Rome.
-
-## Value to Users
-
-- **Interactive Learning**: Engage in a quiz format to enhance your knowledge about the Roman Empire.
-- **User-Friendly**: Easy-to-use interface for a seamless quiz-taking experience.
-- **Track Progress**: Check your previous quiz scores and track your improvement over time.
-
-## Deployment Procedure
-
-github-pages
-
-Last deployed 34 minutes ago (2024-01-05)
-
-<https://linusmolin98.github.io/Roman_empire-quiz/>
-
-- One deployment was made early in process to check that everything was working fine. 
-
-## Action testing page 
-
-![Welcome Screen](/screenshots/action_testing.png)
-*Welcome Screen with Username Input*
-
-![Quiz Question](/screenshots/action_testing2.png)
-*Action testing buttons*
-
-![Quiz Result](/screenshots/action_testing3.png)
-*Quiz changing question works without error*
-
-![Quiz Result](/screenshots/action_testingxx.png)
-*Close up of question box working*
-
-![Quiz Result](/screenshots/action_testingxxxx.png)
-*Score showing when submission is activated*
-
-## Code organization
-
-- HTML: Organized into sections for clarity.
-
-- CSS: External file linked in the HEAD element.
-
-- JavaScript: External file linked just above the closing body tag.
-
-## Code Readability
-
-- Files named consistently and descriptively.
-
-- Grouped into directories by file type (e.g., assets directory for static files).
-
-## Version Control (GitHub)
-
-- The development process has been documented through version control on GitHub. Visit the GitHub Repository for detailed commit history and branches.
-
-- Link to repository here (<https://github.com/LinusMolin98/Roman_empire-quiz?tab=readme-ov-file>)
-
-## Markdown Formatting
-
-- This README.md file uses consistent and effective markdown formatting, providing a well-structured and easy-to-follow guide.
-
-## Code Attribution
-
--Code written by [geeksforgeeks]
-
--External Link to attribution - [https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/]
-
-Code written by [sitepoint]
-
--External Link to attribution - [https://www.sitepoint.com/simple-javascript-quiz/]
-
--Code written by [codingninjas]
-
--External Link to attribution - [https://www.codingninjas.com/studio/library/how-to-create-a-javascript-quiz-code]
-
-## Template
-
-- Template used for this project is the Code Institute template (<https://github.com/Code-Institute-Org/ci-full-template>)
-
-## Lighthouse Report
-
-![lighthouse](/screenshots/Lighthouse_test.png)
-*Lighthouse report running with succesful result*
+Link to website here (https://linusmolin98.github.io/Roman_empire-quiz/index.html)
 
 ## Am i Responsive 
+![Am i Responsive](screenshots/Am_i_resp.png)
 
-![Am i Responsive](/screenshots/am_i_responsive.png)
-*Am i responsive showing how the project looks on different screens, media queries working fine*
+## Project Overview
+The Roman Empire Quiz is an interactive web application designed to test and enrich users' knowledge about the Roman Empire. This educational tool combines entertainment with learning, offering a variety of questions that cover significant aspects of Roman history, culture, and achievements.
 
-## Validation testing
+## Table of Contents
+- [Project Overview](#project-overview)
+  - [Purpose](#purpose)
+  - [Value to Users](#value-to-users)
+- [UX Design Elements](#ux-design-elements)
+- [Features](#features)
+- [Deployment](#deployment)
+  - [Deployment Procedure](#deployment-procedure)
+- [Testing](#testing)
+  - [Lighthouse Report](#lighthouse-report)
+- [Credits](#credits)
+  - [Content and Media](#content-and-media)
+  - [Code Attribution](#code-attribution)
+  - [External Resources](#external-resources)
+- [Acknowledgements](#acknowledgements)
 
-![Validation](/screenshots/validation_image.png)
-*HTML code running through w3c validator without Errors!*
+### Purpose
+- **Engage users** in the rich history of the Roman Empire through an interactive quiz format.
+- **Educate** participants about key events, figures, and cultural aspects of ancient Rome.
+- **Track Progress** by allowing users to review their scores and learn from their mistakes.
 
-![Validation](/screenshots/validation_image2.png)
-*JavaScript code running through JShint with some warnings, but no mayor issues or errors, just some places where the code can be optimized, wich seems reasonable with regards to my experience coding with this language*
+### Value to Users
+- **Interactive Learning**: Enhance understanding of the Roman Empire in an engaging manner.
+- **User-Friendly Interface**: Enjoy a seamless experience tailored for ease of use.
+- **Track Score**: Monitor improvement over time with direct feedback.
 
-![Validation](/screenshots/validationimage3.png)
-*CSS code running through Jigsaw test without any Errors!*
+## UX Design Elements
+- **Intuitive Navigation**: Ensures users can easily find their way through the quiz.
+- **Responsive Design**: Accessible on various devices, providing a consistent experience across platforms.
+- **Aesthetically Pleasing**: Thematic visuals and layouts that immerse users in the historical context.
+- **Clear Content**: Questions and answers are presented clearly to facilitate learning.
 
-## Bug Fixing
+## Features
+- **Welcoming Interface**: Users are greeted and prompted to enter their names for a personalized experience.
+- **Dynamic Questions**: A pool of questions that randomizes with each attempt for a fresh experience.
+- **Immediate Feedback**: Users receive instant feedback on their answers to facilitate learning.
+- **Score Summary**: At the end of the quiz, users can review their performance and correct answers.
 
-- If you encounter any issues or bugs while using the Roman Empire Quiz application, please report them by opening an [issue](https://github.com/your-username/Roman_empire-quiz/issues). Include a detailed description of the problem, steps to reproduce, and any error messages you may have encountered. Your feedback helps me improve the application and provide a better experience for all users. I appreciate your contribution to making the quiz more robust and enjoyable!
+## Deployment
+The Roman Empire Quiz is deployed via GitHub Pages and is accessible [here](https://linusmolin98.github.io/Roman_empire-quiz/).
 
-- Bugs where minimal during the coding process, everything went smooth! 
+### Deployment Procedure
+1. Navigate to the repository settings on GitHub.
+2. Locate the GitHub Pages section and select the main branch as the source.
+3. Confirm deployment and access the provided URL to view the live site.
+
+## Testing
+- **Browser Compatibility**: Tested on Chrome, Firefox, and Safari to ensure functionality across different platforms.
+- **Responsive Design**: Verified on various devices to ensure a consistent user experience.
+- **Validation**: HTML, CSS, and JavaScript codes have been validated with no major errors.
+
+### Lighthouse Report
+A comprehensive Lighthouse audit confirms high performance, accessibility, best practices, and SEO.
+
+## Credits
+
+### Content and Media
+- Questions and historical content were inspired by reputable history resources and literature on ancient Rome.
+- Visual assets were carefully selected from royalty-free image sources to enhance the thematic experience.
+
+### Code Attribution
+- Quiz logic and structure adapted from educational resources such as [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/), [SitePoint](https://www.sitepoint.com/simple-javascript-quiz/), and [Coding Ninjas](https://www.codingninjas.com/studio/library/how-to-create-a-javascript-quiz-code).
+
+### External Resources
+- Utilized Font Awesome for icons and Google Fonts for typography to improve the visual appeal and user interface.
+
+## Acknowledgements
+Special thanks to the Code Institute for providing the initial template and to all the external resources and tutorials that contributed to the successful development of this project.
