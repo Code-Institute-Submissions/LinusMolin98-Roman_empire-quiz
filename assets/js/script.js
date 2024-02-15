@@ -3,8 +3,10 @@ let totalQuestions = 10;
 let usernameProvided = false;
 let questionOrder = shuffleArray(Array.from({ length: totalQuestions }, (_, i) => i + 1));
 
-document.getElementById('restartButton').style.display = 'none'; // Initially hide the restart button
-document.getElementById('submitButton').style.display = 'none'; // Initially hide the submit button
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('restartButton').style.display = 'none'; // Initially hide the restart button
+    document.getElementById('submitButton').style.display = 'none'; // Initially hide the submit button
+});
 
 function startQuiz() {
     const username = document.getElementById('username').value.trim();
@@ -66,7 +68,7 @@ function updateButtonStates() {
 
 function checkAnswers() {
     let correctAnswers = 0;
-    let answersDetail = {}; // Object to hold the correctness of each question
+    let answersDetail = {};
 
     for (let i = 1; i <= totalQuestions; i++) {
         const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
@@ -85,11 +87,10 @@ function checkAnswers() {
     }
 
     const username = document.getElementById('username').value.trim();
-    // Save results and details in local storage
     localStorage.setItem('quizUsername', username);
     localStorage.setItem('quizScore', correctAnswers);
     localStorage.setItem('totalQuestions', totalQuestions);
-    localStorage.setItem('answersDetail', JSON.stringify(answersDetail)); // Convert object to string to store in local storage
+    localStorage.setItem('answersDetail', JSON.stringify(answersDetail)); // Convert object to string for storage
 
     window.location.href = 'results.html'; // Redirect to results page
 }

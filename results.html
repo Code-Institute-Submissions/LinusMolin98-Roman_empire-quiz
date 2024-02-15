@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Add any additional styles or links -->
 </head>
 <body>
 
@@ -16,32 +19,34 @@
         <p>You answered <span id="correctAnswers"></span> out of <span id="totalQuestions"></span> questions correctly.</p>
     </div>
 
-    <button onclick="restartQuiz()">Restart Quiz</button>
+    <div id="detailedResults"></div>
+
+    <button class="button" onclick="restartQuiz()">Restart Quiz</button>
 
     <script>
         window.addEventListener('load', () => {
             const username = localStorage.getItem('quizUsername');
             const score = localStorage.getItem('quizScore');
             const total = localStorage.getItem('totalQuestions');
-            const answersDetail = JSON.parse(localStorage.getItem('answersDetail')); // Parse the string back into an object
-    
-            document.getElementById('greeting').textContent = `Hello, ${username}!`;
+            const answersDetail = JSON.parse(localStorage.getItem('answersDetail'));
+
+            document.getElementById('greeting').textContent = `Hello, ${username}! Here's how you did:`;
             document.getElementById('correctAnswers').textContent = score;
             document.getElementById('totalQuestions').textContent = total;
-    
+
             const resultsContainer = document.getElementById('detailedResults');
             for (const [question, result] of Object.entries(answersDetail)) {
                 const resultText = document.createElement('p');
                 resultText.textContent = `${question.toUpperCase()}: ${result}`;
+                resultText.className = result; // Assign class based on the result for styling
                 resultsContainer.appendChild(resultText);
             }
         });
-    
+
         function restartQuiz() {
             window.location.href = 'index.html'; // Adjust this URL to your quiz start page
-            localStorage.clear(); // Optionally clear the local storage if the quiz is being restarted
+            localStorage.clear(); // Clear local storage to reset the quiz for the next attempt
         }
     </script>
-<script src="assets/js/script.js"></script>
 </body>
 </html>

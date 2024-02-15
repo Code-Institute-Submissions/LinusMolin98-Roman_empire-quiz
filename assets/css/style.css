@@ -56,10 +56,10 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
-    color: black; /* Add this line to set the text color to black */
+    color: #333; /* Changed to ensure visibility */
 }
 
-#quizContainer {
+#quizContainer, #resultsContainer {
     background-color: #ecf0f1;
     padding: 20px;
     border-radius: 8px;
@@ -94,9 +94,7 @@ button[type="button"]:hover {
     background-color: #2980b9;
 }
 
-#prevButton,
-#nextButton,
-#submitButton {
+#prevButton, #nextButton, #submitButton {
     background-color: #e74c3c;
     color: white;
     padding: 12px 24px;
@@ -107,17 +105,26 @@ button[type="button"]:hover {
     transition: background-color 0.3s ease;
 }
 
-#prevButton:hover,
-#nextButton:hover,
-#submitButton:hover {
+#prevButton:hover, #nextButton:hover, #submitButton:hover {
     background-color: #c0392b;
 }
 
-#prevButton:disabled,
-#nextButton:disabled,
-#submitButton:disabled {
+#prevButton:disabled, #nextButton:disabled, #submitButton:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+/* Added styles for feedback */
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.unanswered {
+    color: grey;
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,7 +138,7 @@ button[type="button"]:hover {
         max-width: 80%;
     }
 
-    #quizContainer {
+    #quizContainer, #resultsContainer {
         padding: 10px;
     }
 }
@@ -141,7 +148,7 @@ button[type="button"]:hover {
         max-width: 1200px;
     }
 
-    #quizContainer {
+    #quizContainer, #resultsContainer {
         padding: 30px;
     }
 }
