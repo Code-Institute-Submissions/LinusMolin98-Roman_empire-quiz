@@ -43,6 +43,23 @@ The Roman Empire Quiz is an interactive web application designed to test and enr
 ![Radio buttons](screenshots/radiobuttons3.png)
 - Radio buttons working without errors. 
 
+## Previous Button 
+![Previous button](screenshots/previousbutton.png)
+- After moving on to the next question, the previous button appears, wich gives the user the possibility to return to the question before. This gives the user the chance to change the question. 
+
+## Submit Button
+![Submit button](screenshots/submitbutton.png)
+- On the last question, the submit button will appear, wich enables the user to submit there answers, after this they will be redirected to the Quiz Results page. 
+
+## Quiz Results 
+![Quiz Results](screenshots/Quizresults.png)
+- After finishing the 10 questions of the quiz, you will press the submit button, wich takes you to the Quiz Results page. The user will be able to see wich questions where correct, wrong and unanswered. If the question is correct it will be highlighet in green, if its wrong it will be red, and if unanswered it will be grey. 
+
+## Restart Quiz
+![Restart Quiz](screenshots/restart.png)
+- Upon submitting the quiz, the user will be able to restart the quiz through a restart button. When the restart button is pressed the user will be sent back to the starting page, and all of the information will be reset, the questions will also shuffle for variation. 
+
+
 ### Purpose
 - **Engage users** in the rich history of the Roman Empire through an interactive quiz format.
 - **Educate** participants about key events, figures, and cultural aspects of ancient Rome.
