@@ -95,6 +95,11 @@ The Roman Empire Quiz is deployed via GitHub Pages and is accessible [here](http
 - **Responsive Design**: Verified on various devices to ensure a consistent user experience.
 - **Validation**: HTML, CSS, and JavaScript codes have been validated with no major errors.
 
+![JShint](screenshots/JShint.png)
+![index.HTML](screenshots/index.png)
+![Results.HTML](screenshots/results.png)
+![style.css](screenshots/css.png)
+
 ### Lighthouse Report
 ![Lighthouse](screenshots/lighthouse2.png)
 A comprehensive Lighthouse audit confirms high performance, accessibility, best practices, and SEO. Performance could be higher, but with the circumstances given, it´s a result im happy with. 
@@ -110,6 +115,13 @@ A comprehensive Lighthouse audit confirms high performance, accessibility, best 
 
 ### External Resources
 - Utilized Font Awesome for icons and Google Fonts for typography to improve the visual appeal and user interface.
+
+### Unfixed bugs
+- Images are a bit slow to load, wich could be the reason for the lower performance score on lighthouse. This could be fixed for a cleaner and better working quiz. 
+
+### Ideas left to implement
+- Definately a score history system, i tried implementing it but i did not get it working wich was unfortunate. There is a local storage implemented so the possibility is there, it just needs to get dialed in. 
+- I would also add more content, more animations and graphic scenery for a more pleasant experience. 
 
 ## Acknowledgements
 Special thanks to the Code Institute for providing the initial template and to all the external resources and tutorials that contributed to the successful development of this project.
