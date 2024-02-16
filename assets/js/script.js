@@ -75,7 +75,7 @@ function checkAnswers() {
 
     for (let i = 1; i <= totalQuestions; i++) {
         const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
-        const correctOption = "a"; // Assuming 'a' is the correct answer for simplicity
+        const correctOption = "a"; 
 
         if (selectedOption) {
             if (selectedOption.value === correctOption) {
@@ -93,12 +93,12 @@ function checkAnswers() {
     localStorage.setItem('quizUsername', username);
     localStorage.setItem('quizScore', correctAnswers);
     localStorage.setItem('totalQuestions', totalQuestions);
-    localStorage.setItem('answersDetail', JSON.stringify(answersDetail)); // Convert object to string for storage
+    localStorage.setItem('answersDetail', JSON.stringify(answersDetail)); 
 
-    window.location.href = 'results.html'; // Redirect to results page
+    window.location.href = 'results.html'; 
 }
 
-// Helper function to reset the quiz if needed
+
 function resetQuiz() {
     currentQuestion = 1;
     document.getElementById('quizContainer').style.display = 'none';

@@ -56,7 +56,7 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
-    color: #333; /* Changed to ensure visibility */
+    color: #333; 
 }
 
 #quizContainer, #resultsContainer {
@@ -114,7 +114,7 @@ button[type="button"]:hover {
     cursor: not-allowed;
 }
 
-/* Added styles for feedback */
+
 .correct {
     color: green;
 }
