@@ -29,6 +29,20 @@ The Roman Empire Quiz is an interactive web application designed to test and enr
 ![When reaching site](screenshots/reachingthesite.png)
 - Upon reaching the site, the user is welcomed by a picture of a roman helmet, some information about how the quiz is played, and the bar where the user have to put in there username to start the quiz. If the user does not put in there username, they will be unable to start the quiz.
 
+## Username 
+![Typing in Username](screenshots/username.png)
+- Username bar works without errors. 
+
+## Reaching the first question 
+![First Question](screenshots/first_question.png)
+- Upon reaching the first question, the user gets three alternatives to answer. The questions are answered through the radiobuttons wich are clickable on the text aswell. At this point there is only a "next" button showing. 
+
+## Radio Buttons 
+![Radio buttons](screenshots/radio_buttons.png)
+![Radio buttons](screenshots/radiobuttons2.png)
+![Radio buttons](screenshots/radiobuttons3.png)
+- Radio buttons working without errors. 
+
 ### Purpose
 - **Engage users** in the rich history of the Roman Empire through an interactive quiz format.
 - **Educate** participants about key events, figures, and cultural aspects of ancient Rome.
